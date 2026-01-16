@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -56,7 +55,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           data-orchids-project-id="3f942a6c-8b37-4726-ae75-4ad51b4bcf80"
         />
-        <ErrorReporter />
+
         <Script
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
           strategy="afterInteractive"
