@@ -31,7 +31,6 @@ import {
   MousePointer2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const wrap = (min: number, max: number, v: number) => {
@@ -58,7 +57,7 @@ const FloatingParticles = () => {
         duration: Math.random() * 10 + 10,
         delay: Math.random() * 5,
         yEnd: Math.random() * -500 - 100,
-      }))
+      })),
     );
   }, []);
 
@@ -324,7 +323,7 @@ const Navbar = () => {
                 )}
                 <span className="relative z-10">{item}</span>
               </motion.a>
-            )
+            ),
           )}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -332,19 +331,26 @@ const Navbar = () => {
             transition={{ delay: 0.8 }}
           >
             <MagneticButton>
-              <Button
-                variant="outline"
-                className="ml-4 rounded-full border-white/10 hover:bg-white hover:text-black transition-all group"
+              <a
+                href="/Parth_Kachhela_Resume.pdf"
+                download="Parth_Kachhela_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Resume
-                <motion.span
-                  className="ml-2"
-                  initial={{ x: 0, y: 0 }}
-                  whileHover={{ x: 2, y: -2 }}
+                <Button
+                  variant="outline"
+                  className="ml-4 rounded-full border-white/10 hover:bg-white hover:text-black transition-all group"
                 >
-                  <ArrowUpRight size={16} />
-                </motion.span>
-              </Button>
+                  Resume
+                  <motion.span
+                    className="ml-2"
+                    initial={{ x: 0, y: 0 }}
+                    whileHover={{ x: 2, y: -2 }}
+                  >
+                    <ArrowUpRight size={16} />
+                  </motion.span>
+                </Button>
+              </a>
             </MagneticButton>
           </motion.div>
         </div>
